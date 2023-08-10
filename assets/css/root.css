@@ -1,18 +1,20 @@
 :root{
     /* font size */
-    --fs-xl:96px;
-    --fs-head:48px ;
-    --fs-lg:22px ;
-    --fs-sm:16px;
+    --fs-xl:36px;
+    --fs-head:42px ;
+    --fs-lg:14px ;
+    --fs-sm:15px;
 
     /* clr */
     --clr-1: #30343a;
     --clr-2: #d6d6d8;
     --clr-3: #252930;
-    --clr-4:#d3d4d8;
+    --clr-4:#d3d4d6;
     --clr-5:#515459;
     --clr-6:#4d73f8;
     --clr-7:#f6f8fc;
+    --clr-8:#252930;
+    --clr-9:#4f5259;
 }
 .fs-xl{
     font-size: var(--fs-xl);
@@ -46,4 +48,19 @@
 }
 .clr-7{
     background-color: var(--clr-7);
+}
+.clr-8{
+    color: var(--clr-8);
+}
+.clr-9{
+    color: var(--clr-9);
+}
+@media (min-width:576px) {
+    :root{
+        /* font size */
+        --fs-xl:69px;
+        --fs-head:48px ;
+        --fs-lg:22px ;
+        --fs-sm:15px;
+    }
 }
