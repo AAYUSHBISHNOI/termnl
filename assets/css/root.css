@@ -70,6 +70,15 @@
 @media (min-width:576px) {
     :root{
         /* font size */
+        --fs-xl:36px;
+        --fs-head:48px ;
+        --fs-lg:22px ;
+        --fs-sm:15px;
+    }
+}
+@media (min-width:768px) {
+    :root{
+        /* font size */
         --fs-xl:69px;
         --fs-head:48px ;
         --fs-lg:22px ;

@@ -42,13 +42,13 @@
         </div>
     </section>
     <!-- Hero -->
-    <section class="bg-img d-flex flex-column min_100vh overflow-hidden text-center ">
-        <div class="container mt-245  pb-5 ">
+    <section class="bg-img d-flex flex-column min_vh overflow-hidden text-center ">
+        <div class="container mt-245 pstn pb-5 ">
             <div class="single-item">
                 <div>
                     <h1 class="fw-700 fs-xl clr-2">Et dictumst<span class="clr-6">diam <span class="d-block">pharetra <span class="clr-2">volutpat</span> </span></span></h1>
                     <p class="fw-600 fs-lg clr-2 ff-poppins ">Dolor lacus nisl at elementum, aliquet ac. Consectetur viverra ornarevel morbi <span class="d-lg-block">ut in tincidunt viverra. Aenean feugiat malesuada nunc aliquetvitae,commodo,</span>pellentesque laoreet amet.</p>
-                       <ul> 
+                       <ul class="mt-5"> 
                         <li><a href="" class="fw-700 fs-lg clr-2 ff-poppins btn_1">GET STARTED</a></li>
                     </ul>
                 </div>
@@ -65,7 +65,7 @@
                             commodo,</span>
                         pellentesque laoreet amet.
                     </p>
-                        <ul>
+                        <ul class="mt-5">
                             <li><a href="" class="fw-700 fs-lg clr-2 ff-poppins btn_1">GET STARTED</a></li>
                         </ul>
                 </div>
@@ -82,7 +82,7 @@
                             commodo,</span>
                         pellentesque laoreet amet.
                     </p>
-                        <ul>
+                        <ul class="mt-5">
                             <li><a href="" class="fw-700 fs-lg clr-2 ff-poppins btn_1">GET STARTED</a></li>
                         </ul>
                 </div>
@@ -99,12 +99,15 @@
                             commodo,</span>
                         pellentesque laoreet amet.
                     </p>
-                        <ul>
+                        <ul class="mt-5">
                             <li><a href="" class="fw-700 fs-lg clr-2 ff-poppins btn_1">GET STARTED</a></li>
                         </ul>
                 </div>
             </div>
 
+	            <button class="prev-btn bttn_pstn"><img src="/assets/img/svg/Group 1169.svg" alt="#"></button>
+	            <button class="next-btn bttn_pstn_1"><img src="/assets/img/svg/Group 22.svg" alt="#"></button>
+           
         </div>
     </section>
     <section class="clr-7">
@@ -176,14 +179,14 @@
     </section>
     <footer class="clr-3">
         <div class="container">
-            <div class="row pt-5 d-flex ">
+            <div class="row justify-content-between pt-5 d-flex ">
                 <div class="col-12 col-md-6">
                     <div>
                         <img src="/assets/img/svg/image4.svg" alt="#">
                     </div>
                     <p class="clr-4 fnt_fmly_poppins fw-400 fs-sm">Dolor lacus nisl at elementum, aliquet ac. <span class="d-lg-block"> Consectetur viverra ornare vel morbi ut in</span><span class="d-lg-block"> tincidunt viverra.</span></p>
                 </div>
-                <div class="col-12 col-md-6 align-content-end align-items-end justify-content-end text-end pt-5 pb-5">
+                <div class="col-12 col-md-4 align-content-end align-items-end justify-content-end text-end pt-5 pb-5">
                     <div class="d-flex">
                         <span class="icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,7 +251,28 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
+        arrows: false,
         autoplaySpeed: 2000,
     });
+    $(".prev-btn").click(function () {
+		$(".single-item").slick("slickPrev");
+	});
+
+	$(".next-btn").click(function () {
+		$(".single-item").slick("slickNext");
+	});
+	$(".prev-btn").addClass("slick-disabled");
+	$(".single-item").on("afterChange", function () {
+		if ($(".slick-prev").hasClass("slick-disabled")) {
+			$(".prev-btn").addClass("slick-disabled");
+		} else {
+			$(".prev-btn").removeClass("slick-disabled");
+		}
+		if ($(".slick-next").hasClass("slick-disabled")) {
+			$(".next-btn").addClass("slick-disabled");
+		} else {
+			$(".next-btn").removeClass("slick-disabled");
+		}
+	});
 </script>
 </html>
