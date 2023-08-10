@@ -4,7 +4,10 @@
     --fs-head:42px ;
     --fs-lg:14px ;
     --fs-sm:15px;
-
+    /* font weight */
+    --fw-400: 400;
+    --fw-600:600;
+    --fw-700:700;
     /* clr */
     --clr-1: #30343a;
     --clr-2: #d6d6d8;
@@ -27,6 +30,15 @@
 }
 .fs-sm{
     font-size: var(--fs-sm);
+}
+.fw-400{
+    font-weight: 400;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-700{
+    font-weight: 700;
 }
 .clr-1{
     background-color: var(--clr-2);
